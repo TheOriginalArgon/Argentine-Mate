@@ -1,0 +1,110 @@
+<Defs>
+
+    <!-- Issue -->
+
+    <IssueDef>
+        <defName>AM_MateConsumption</defName>
+        <label>mate</label>
+        <iconPath>UI/Issues/AM_MateConsumption</iconPath>
+    </IssueDef>
+
+    <HistoryEventDef>
+        <defName>AM_ConsumedMate</defName>
+        <label>consumed mate</label>
+    </HistoryEventDef>
+
+    <PreceptDef>
+        <defName>AM_MateConsumption_Normal</defName>
+        <issue>AM_MateConsumption</issue>
+        <label>normal</label>
+        <description>Mate is just another hot infusion.</description>
+        <impact>Low</impact>
+        <displayOrderInIssue>30</displayOrderInIssue>
+        <displayOrderInImpact>100</displayOrderInImpact>
+    </PreceptDef>
+
+    <PreceptDef>
+        <defName>AM_MateConsumption_Exalted</defName>
+        <issue>AM_MateConsumption</issue>
+        <label>exalted</label>
+        <description>Mate is a very healthy drink. Consuming it is good.</description>
+        <impact>Low</impact>
+        <displayOrderInIssue>20</displayOrderInIssue>
+        <displayOrderInImpact>100</displayOrderInImpact>
+        <comps>
+            <li Class="PreceptComp_SelfTookMemoryThought">
+                <eventDef>AM_ConsumedMate</eventDef>
+                <thought>AM_ConsumedMate_Exalted</thought>
+                <description>Consumed mate</description>
+            </li>
+        </comps>
+    </PreceptDef>
+
+    <PreceptDef>
+        <defName>AM_MateConsumption_Required</defName>
+        <issue>AM_MateConsumption</issue>
+        <label>required</label>
+        <description>Drinking mate is part of our culture, and we shall consume it regularly, for it has incredible benefits and it is also a signature tradition of our people; we must not forget it.</description>
+        <impact>High</impact>
+        <displayOrderInIssue>10</displayOrderInIssue>
+        <displayOrderInImpact>100</displayOrderInImpact>
+        <comps>
+            <li Class="PreceptComp_SelfTookMemoryThought">
+                <eventDef>AM_ConsumedMate</eventDef>
+                <thought>AM_ConsumedMate_Required</thought>
+                <description>Consumed mate</description>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>AM_ConsumedMate_Required</thought>
+                <description>{DAYSSINCELASTMATE} days since last consumed mate</description>
+                <tooltipShowMoodRange>true</tooltipShowMoodRange>
+            </li>
+        </comps>
+    </PreceptDef>
+
+    <ThoughtDef>
+        <defName>AM_ConsumedMate_Exalted</defName>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>consumed mate</label>
+                <description>I consumed mate, that is one good drink.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>AM_ConsumedMate_Required</defName>
+        <!-- <thoughtClass>ArgentineMate.Thought_Situational_Precept_Mate</thoughtClass> -->
+        <workerClass>ArgentineMate.ThoughtWorker_Precept_Mate</workerClass>
+        <minExpectationForNegativeThought>Low</minExpectationForNegativeThought>
+        <stages>
+            <li>
+                <label>drank mate</label>
+                <description>I'm following my beliefs by drinking mate on a regular basis.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+            <li>
+                <label>mate</label>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>missing mate</label>
+                <description>I haven't consumed mate in some time. I'm forgetting my roots.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+            <li>
+                <label>missing mate</label>
+                <description>I haven't consumed mate in some time. I'm forgetting my roots.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+            <li>
+                <label>missing mate</label>
+                <description>I haven't consumed mate in some time. I'm forgetting my roots.</description>
+                <baseMoodEffect>-12</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

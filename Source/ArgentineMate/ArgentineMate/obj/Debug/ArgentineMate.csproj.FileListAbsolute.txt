@@ -1,0 +1,9 @@
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\bin\Debug\ArgentineMate.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\bin\Debug\ArgentineMate.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\bin\Debug\0Harmony.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\bin\Debug\0Harmony.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.csproj.CopyComplete
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\1.5\Assemblies\ArgentineMate.dll

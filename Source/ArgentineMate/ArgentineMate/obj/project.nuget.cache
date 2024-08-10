@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZQwSV3PXNi/atZj804y9jf33M62HMX5MY54vn286v2/2K9k6Y9TongqrktcHfuQ4edhmWXJV7FF+N06HAuuqiA==",
+  "success": true,
+  "projectFilePath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leonm\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4146-beta\\krafs.rimworld.ref.1.5.4146-beta.nupkg.sha512",
+    "C:\\Users\\leonm\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,29 @@
+<ModMetaData>
+    <name>Argentine Mate</name>
+    <author>Argon</author>
+    <packageId>Argon.Mate</packageId>
+    <supportedVersions>
+        <li>1.4</li>
+        <li>1.5</li>
+    </supportedVersions>
+    <description>A mod that adds mate to the game. A typical hot infusion from Argentina.</description>
+    <modDependencies>
+        <li>
+            <packageId>Argon.CoreLib</packageId>
+            <displayName>Argonic Core</displayName>
+            <downloadUrl>https://github.com/TheOriginalArgon/ArgonicCore</downloadUrl>
+        </li>
+        <li>
+            <packageId>oskarpotocki.vanillafactionsexpanded.core</packageId>
+            <displayName>Vanilla Expanded Framework</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>brrainz.harmony</li>
+        <li>Argon.CoreLib</li>
+        <li>oskarpotocki.vanillafactionsexpanded.core</li>
+    </loadAfter>
+</ModMetaData>

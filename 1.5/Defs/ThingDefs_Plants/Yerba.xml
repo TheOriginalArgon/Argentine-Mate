@@ -1,0 +1,42 @@
+<Defs>
+
+    <ThingDef ParentName="PlantBase">
+        <defName>AM_Plant_Yerba</defName>
+        <label>yerba mate plant</label>
+        <description>A small, bushy-like plant native to the regions of South America back in old earth. The leaves of this plant are widely known for being the main ingredient of a popular hot infusion known as Mate. It is rumored across the rimworlds that this beverage has been popularized by a civilization of humans that originated from the region on earth where this drink was consumed, after numerous arguments with fellow groups who claimed to have invented the drink themselves.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <!-- Placeholder -->
+            <texPath>Things/Plant/AM_YerbaPlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <ingestible />
+        <plant>
+            <!-- Placeholder -->
+            <immatureGraphicPath>Things/Plant/AM_YerbaPlant</immatureGraphicPath>
+
+            <growDays>13.00</growDays>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+            <harvestedThingDef>AM_RawYerbaMate</harvestedThingDef>
+            <drugForHarvestPurposes>True</drugForHarvestPurposes>
+            <harvestYield>11</harvestYield>
+            <sowMinSkill>6</sowMinSkill>
+            <sowTags>
+                <li>Ground</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+            <visualSizeRange>0.5~1.0</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <pollution>Any</pollution>
+            <fertilityMin>0.50</fertilityMin>
+            <fertilitySensitivity>0.3</fertilitySensitivity>
+        </plant>
+    </ThingDef>
+
+</Defs>

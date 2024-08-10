@@ -1,0 +1,444 @@
+<Defs>
+
+    <!-- ==================== MATE ==================== -->
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>AM_Mate</defName>
+        <label>mate</label>
+        <description>A hot infusion drink brewed from the processed leaves of Yerba Mate. This drink originated from a region within the old continent of South America, back on earth. The drink has been widely popularized by humans across the rimworlds, due to its wide array of health benefits and its capacity to bring people and cultures together through the tradition of drinking Mate together. It is said that some people are addicted to this drink, although, such addiction causes no negative effects at all, thus the reason it is often interpreted as a sign of cultural roots of the individual.</description>
+        <descriptionHyperlinks>
+            <HediffDef>AM_MateHigh_normal</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/AM_Mate</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>550</WorkToMake>
+            <MarketValue>7</MarketValue>
+            <Mass>0.05</Mass>
+            <DeteriorationRate>6</DeteriorationRate>
+        </statBases>
+        <techLevel>Neolithic</techLevel>
+        <ingestible>
+            <foodType>Fluid, Processed</foodType>
+            <joyKind>Chemical</joyKind>
+            <joy>0.10</joy>
+            <baseIngestTicks>190</baseIngestTicks>
+            <nurseable>false</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Drink</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestHoldUsesTable>false</ingestHoldUsesTable>
+            <ingestCommandString>Drink {0}</ingestCommandString>
+            <ingestReportString>Drinking {0}.</ingestReportString>
+            <!-- <ateEvent>AM_ConsumedMate</ateEvent> -->
+            <outcomeDoers>
+                <li Class="ArgonicCore.IngestionOutcomes.IngestionOutcomeDoer_HediffsPerQuality">
+                    <hediffDefs>
+                        <li>AM_MateHigh_awful</li>
+                        <li>AM_MateHigh_poor</li>
+                        <li>AM_MateHigh_normal</li>
+                        <li>AM_MateHigh_good</li>
+                        <li>AM_MateHigh_excellent</li>
+                        <li>AM_MateHigh_masterwork</li>
+                        <li>AM_MateHigh_legendary</li>
+                    </hediffDefs>
+                    <severity>0.25</severity>
+                    <toleranceChemical>AM_ChemicalYerba</toleranceChemical>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <recipeUsers>
+                <li>Campfire</li>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+            </recipeUsers>
+            <effectWorking>Cook</effectWorking>
+            <soundWorking>Recipe_Brewing</soundWorking>
+            <workSpeedStat>CookSpeed</workSpeedStat>
+            <workSkill>Cooking</workSkill>
+            <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+            <displayPriority>1460</displayPriority>
+        </recipeMaker>
+        <costList>
+            <AM_Yerba>4</AM_Yerba>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <chemical>AM_ChemicalYerba</chemical>
+                <addictiveness>0.002</addictiveness>
+                <minToleranceToAddict>0.20</minToleranceToAddict>
+                <existingAddictionSeverityOffset>0.02</existingAddictionSeverityOffset>
+                <needLevelOffset>0.25</needLevelOffset>
+                <listOrder>500</listOrder>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="VanillaCookingExpanded.CompProperties_StackByQuality" />
+        </comps>
+        <modExtensions>
+            <li Class="ArgonicCore.ModExtensions.ThingDefExtension_InheritsQuality">
+                <keyIngredient>AM_Yerba</keyIngredient>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- HEDIFFS -->
+    <HediffDef>
+        <defName>AM_MateHigh_awful</defName>
+        <label>mate warmth</label>
+        <labelNoun>warmth from mate.</labelNoun>
+        <description>Yerba mate active in the body. Causes a very small energy boost.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(27,204,74)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.01</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>AM_MateHigh_poor</defName>
+        <label>mate warmth</label>
+        <labelNoun>warmth from mate.</labelNoun>
+        <description>Yerba mate active in the body. Causes a very small energy boost.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(27,204,74)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.05</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>AM_MateHigh_normal</defName>
+        <label>mate warmth</label>
+        <labelNoun>warmth from mate.</labelNoun>
+        <description>Yerba mate active in the body. Causes a very small energy boost.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(27,204,74)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <RestFallRateFactor>0.95</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>AM_MateHigh_good</defName>
+        <label>mate warmth</label>
+        <labelNoun>warmth from mate.</labelNoun>
+        <description>Yerba mate active in the body. Causes a very small energy boost.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(27,204,74)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.12</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <RestFallRateFactor>0.92</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>AM_MateHigh_excellent</defName>
+        <label>mate warmth</label>
+        <labelNoun>warmth from mate.</labelNoun>
+        <description>Yerba mate active in the body. Causes a very small energy boost.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(27,204,74)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-5.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <RestFallRateFactor>0.9</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>AM_MateHigh_masterwork</defName>
+        <label>mate warmth</label>
+        <labelNoun>warmth from mate.</labelNoun>
+        <description>Yerba mate active in the body. Causes a very small energy boost.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(27,204,74)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-5.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.16</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <RestFallRateFactor>0.89</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>AM_MateHigh_legendary</defName>
+        <label>mate warmth</label>
+        <labelNoun>warmth from mate.</labelNoun>
+        <description>Yerba mate active in the body. Causes a very small energy boost.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(27,204,74)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-4.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <RestFallRateFactor>0.8</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ChemicalDef>
+        <defName>AM_ChemicalYerba</defName>
+        <label>yerba mate</label>
+        <addictionHediff>AM_YerbaMateAddiction</addictionHediff>
+        <toleranceHediff>AM_YerbaMateTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.1</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.95</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0.5</geneToleranceBuildupFactorImmune>
+        <geneOverdoseChanceFactorResist>0.95</geneOverdoseChanceFactorResist>
+        <geneOverdoseChanceFactorImmune>0.5</geneOverdoseChanceFactorImmune>
+
+        <!-- If something about the genes is commented, revert this shit to 0.5 and 0 for Resist and Immune -->
+    </ChemicalDef>
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>AM_YerbaMateAddiction</defName>
+        <label>yerba mate addiction</label>
+        <description>A chemical addiction to yerba mate. Though it's technically an addictive behavior, it is not often considered to be one due to its lack of withdrawal symptoms.\nIt is said most mate consumers are addicted to yerba mate without even knowing.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <causesNeed>AM_Need_YerbaMate</causesNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0333</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>AM_Need_YerbaMate</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>mate</label>
+        <description>Because of a yerba mate addiction, this person's body seeks to regularly consume mate.</description>
+        <listPriority>50</listPriority>
+    </NeedDef>
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>AM_YerbaMateTolerance</defName>
+        <label>yerba mate tolerance</label>
+        <description>A built-up tolerance to yerba mate. It just makes the person want to drink more mate. Doesn't affect negatively at all.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.015</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>AM_ChemicalYerba</chemical>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- ==================== RAW YERBA ==================== -->
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>AM_RawYerbaMate</defName>
+        <label>raw yerba mate</label>
+        <description>Harvested branches and leaves of the Yerba Mate plant. These can be further processed via a treatment that involves drying and grounding, allowing them to be used to create the classical Yerba Mate mix used for brewing Mate, a hot infusion rich in nutrients which provides benefits to digestion and cognitive capacity.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/AM_RawYerbaMate</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.9</MarketValue>
+            <Flammability>1.3</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>10</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>PlantMatter</li>
+        </thingCategories>
+        <ingestible>
+            <preferability>DesperateOnly</preferability>
+            <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+        </ingestible>
+    </ThingDef>
+
+    <!-- ==================== GROUND YERBA ==================== -->
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>AM_GroundYerbaMate</defName>
+        <label>ground yerba mate</label>
+        <description>Yerba Mate that has been finely processed and is ready for the stationing process. Stationing takes some time depending on the desired quality; after which, the Yerba mix is ready to be brewed into Mate.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/AM_GroundYerbaMate</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+            <Flammability>1.5</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>32</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>PlantMatter</li>
+        </thingCategories>
+        <ingestible>
+            <preferability>DesperateOnly</preferability>
+            <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+        </ingestible>
+    </ThingDef>
+
+    <!-- ==================== PROCESSED YERBA ==================== -->
+    <ThingDef ParentName="ResourceBase">
+        <defName>AM_Yerba</defName>
+        <label>yerba mate</label>
+        <description>Stationed Yerba Mate, finely grounded and mixed. Ready to be brewed into delicious Mate.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/AM_Yerba</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <stackLimit>150</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <MarketValue>1.4</MarketValue>
+            <Mass>0.02</Mass>
+            <Flammability>0.8</Flammability>
+            <DeteriorationRate>0.75</DeteriorationRate>
+        </statBases>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+
+</Defs>

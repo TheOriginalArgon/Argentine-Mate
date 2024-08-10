@@ -1,0 +1,21 @@
+<Defs>
+
+    <ItemProcessor.ItemAcceptedDef>
+        <defName>AM_YerbaRackFirstItem</defName>
+        <building>AM_YerbaRack</building>
+        <slot>1</slot>
+        <items>
+            <li>AM_GroundYerbaMate</li>
+        </items>
+    </ItemProcessor.ItemAcceptedDef>
+
+    <ItemProcessor.ItemAcceptedDef>
+        <defName>AM_YerbaGrinderFirstItem</defName>
+        <building>AM_YerbaGrinder</building>
+        <slot>1</slot>
+        <items>
+            <li>AM_RawYerbaMate</li>
+        </items>
+    </ItemProcessor.ItemAcceptedDef>
+
+</Defs>

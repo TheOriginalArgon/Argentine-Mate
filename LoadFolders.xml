@@ -1,0 +1,7 @@
+<loadFolders>
+    <v1.5>
+        <li>/</li>
+        <li>1.5</li>
+        <li IfModActive="ludeon.rimworld.ideology">1.5/Ideology</li>
+    </v1.5>
+</loadFolders>

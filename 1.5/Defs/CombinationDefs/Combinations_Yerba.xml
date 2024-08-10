@@ -1,0 +1,39 @@
+<Defs>
+
+    <ItemProcessor.CombinationDef>
+        <defName>AM_YerbaProcessing</defName>
+        <building>AM_YerbaRack</building>
+        <items>
+            <li>AM_GroundYerbaMate</li>
+        </items>
+        <amount>
+            <li>30</li>
+        </amount>
+        <result>AM_Yerba</result>
+        <yield>30</yield>
+        <useQualityIncreasing>true</useQualityIncreasing>
+        <awfulQualityAgeDaysThreshold>3</awfulQualityAgeDaysThreshold>
+        <poorQualityAgeDaysThreshold>5</poorQualityAgeDaysThreshold>
+        <normalQualityAgeDaysThreshold>7</normalQualityAgeDaysThreshold>
+        <goodQualityAgeDaysThreshold>9</goodQualityAgeDaysThreshold>
+        <excellentQualityAgeDaysThreshold>12</excellentQualityAgeDaysThreshold>
+        <masterworkQualityAgeDaysThreshold>15</masterworkQualityAgeDaysThreshold>
+        <legendaryQualityAgeDaysThreshold>20</legendaryQualityAgeDaysThreshold>
+    </ItemProcessor.CombinationDef>
+
+    <ItemProcessor.CombinationDef>
+        <defName>AM_YerbaGrinding</defName>
+        <building>AM_YerbaGrinder</building>
+        <items>
+            <li>AM_RawYerbaMate</li>
+        </items>
+        <amount>
+            <li>60</li>
+        </amount>
+        <result>AM_GroundYerbaMate</result>
+        <yield>60</yield>
+        <useQualityIncreasing>false</useQualityIncreasing>
+        <singleTimeIfNotQualityIncreasing>0.125</singleTimeIfNotQualityIncreasing>
+    </ItemProcessor.CombinationDef>
+
+</Defs>
