@@ -1,0 +1,137 @@
+<Defs>
+
+    <!-- YERBA DRYING RACK -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>AM_YerbaRack</defName>
+        <label>yerba rack</label>
+        <description>A small rack used to store yerba mate and let it age.</description>
+        <inspectorTabs>
+			<li>PipeSystem.ITab_Processor</li>
+		</inspectorTabs>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Building/AM_YerbaRack/AM_YerbaRack</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(1.5, 1.5)</drawSize>
+            <damageData>
+                <rect>(0.05,0.1,0.9,0.9)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(0.75, 0.35, 0.33)</volume>
+            </shadowData>
+        </graphicData>
+        <uiIconScale>0.6</uiIconScale>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.45</fillPercent>
+        <pathCost>42</pathCost>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <statBases>
+            <WorkToBuild>300</WorkToBuild>
+            <Mass>5</Mass>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <costStuffCount>20</costStuffCount>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <comps>
+            <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+				<notWorkingKey>EM_YerbaRackNotWorking</notWorkingKey>
+				<processes>
+					<li>AM_GroundYerbaToYerba</li>
+				</processes>
+                <showProgressBar>false</showProgressBar>
+				<hideSettings>true</hideSettings>
+			</li>
+        </comps>
+        <tickerType>Rare</tickerType>
+        <rotatable>false</rotatable>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2710</uiOrder>
+        <building>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+        <researchPrerequisites>
+            <li>Brewing</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!-- YERBA GRINDER -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>AM_YerbaGrinder</defName>
+        <label>yerba grinder</label>
+        <description>A small machine used to grind raw harvested Yerba Mate branches into finely grinded Yerba ready to be stationed.</description>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <inspectorTabs>
+			<li>PipeSystem.ITab_Processor</li>
+		</inspectorTabs>
+        <graphicData>
+            <texPath>Things/Building/AM_YerbaGrinder/AM_YerbaGrinder</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1.5, 2.5)</drawSize>
+        </graphicData>
+        <!-- <uiIconScale>0.6</uiIconScale> -->
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.45</fillPercent>
+        <pathCost>50</pathCost>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <statBases>
+            <WorkToBuild>300</WorkToBuild>
+            <Mass>5</Mass>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <size>(1,2)</size>
+        <costList>
+            <Steel>35</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>false</shortCircuitInRain>
+                <basePowerConsumption>125</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+            <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+				<notWorkingKey>EM_YerbaGrinderNotWorking</notWorkingKey>
+				<processes>
+					<li>AM_RawYerbaToGroundYerba</li>
+				</processes>
+                <showProgressBar>true</showProgressBar>
+				<progressBarOffset>(0,0,-0.75)</progressBarOffset>
+				<hideSettings>true</hideSettings>
+			</li>
+        </comps>
+        <tickerType>Rare</tickerType>
+        <rotatable>true</rotatable>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2710</uiOrder>
+        <building>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+        <researchPrerequisites>
+            <li>Brewing</li>
+            <li>Electricity</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+</Defs>

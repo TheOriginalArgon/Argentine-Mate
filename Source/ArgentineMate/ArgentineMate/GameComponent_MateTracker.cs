@@ -42,7 +42,7 @@ namespace ArgentineMate
                     pawnsMateTracker_backup = MateTracker.pawnsMateTracker;
                     if (Current.Game.World.factionManager.OfPlayer.ideos.GetPrecept(DefDatabase<PreceptDef>.GetNamed("AM_MateConsumption_Required")) != null)
                     {
-                        foreach (Pawn pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists)
+                        foreach (Pawn pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists)
                         {
                             MateTracker.AddPawn(pawn, 0);
                             if (MateTracker.pawnsMateTracker[pawn] < int.MaxValue - tickInterval)

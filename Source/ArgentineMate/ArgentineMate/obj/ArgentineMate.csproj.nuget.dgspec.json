@@ -1,19 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj": {}
+    "C:\\Data\\Software\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj": {}
   },
   "projects": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj": {
+    "C:\\Data\\Software\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj",
+        "projectUniqueName": "C:\\Data\\Software\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj",
         "projectName": "ArgentineMate",
-        "projectPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj",
+        "projectPath": "C:\\Data\\Software\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\ArgentineMate.csproj",
         "packagesPath": "C:\\Users\\leonm\\.nuget\\packages\\",
-        "outputPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\obj\\",
+        "outputPath": "C:\\Data\\Software\\Steam\\steamapps\\common\\RimWorld\\Mods\\Argentine Mate\\Source\\ArgentineMate\\ArgentineMate\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -33,6 +34,11 @@
           "net472": {
             "projectReferences": {}
           }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -40,11 +46,11 @@
           "dependencies": {
             "Krafs.Rimworld.Ref": {
               "target": "Package",
-              "version": "[1.5.4146-beta, )"
+              "version": "[1.6.4510-beta, )"
             },
             "Lib.Harmony": {
               "target": "Package",
-              "version": "[2.3.3, )"
+              "version": "[2.3.6, )"
             }
           }
         }

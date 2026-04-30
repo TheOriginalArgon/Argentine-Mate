@@ -7,3 +7,8 @@ C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\Arge
 C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.csproj.CopyComplete
 C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.dll
 C:\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\1.5\Assemblies\ArgentineMate.dll
+C:\Data\Software\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.csproj.AssemblyReference.cache
+C:\Data\Software\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.csproj.CoreCompileInputs.cache
+C:\Data\Software\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\ArgentineMate.dll
+C:\Data\Software\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\1.6\Assemblies\ArgentineMate.dll
+C:\Data\Software\Steam\steamapps\common\RimWorld\Mods\Argentine Mate\Source\ArgentineMate\ArgentineMate\obj\Debug\Argentin.8A995EC6.Up2Date

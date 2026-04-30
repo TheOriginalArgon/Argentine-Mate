@@ -1,0 +1,35 @@
+<Defs>
+
+    <RecipeDef>
+        <defName>Make_GroundYerba</defName>
+        <label>ground yerba mate</label>
+        <description>Process raw yerba mate into grounded leaves, which are ready to be stationed.</description>
+        <jobString>Grinding yerba mate.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+        <workAmount>1200</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <recipeUsers>
+            <li>TableButcher</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AM_RawYerbaMate</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>AM_RawYerbaMate</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <AM_GroundYerbaMate>30</AM_GroundYerbaMate>
+        </products>
+    </RecipeDef>
+
+</Defs>

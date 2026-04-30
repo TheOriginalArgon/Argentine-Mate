@@ -1,0 +1,11 @@
+<LanguageData>
+
+    <AM_InsertYerbaDesc>Insert Yerba Mate.</AM_InsertYerbaDesc>
+    <AM_StartInsertionYerba>Start Yerba insertion</AM_StartInsertionYerba>
+    <AM_StartInsertionYerbaDesc>Begins Yerba insertion.</AM_StartInsertionYerbaDesc>
+    <AM_CancelBringingYerba>Cancel Yerba insertion</AM_CancelBringingYerba>
+    <AM_CancelBringingYerbaDesc>Cancels Yerba insertion.</AM_CancelBringingYerbaDesc>
+    <AM_YerbaIsRaining>Yerba mate is ruining due to rain.</AM_YerbaIsRaining>
+    <AM_YerbaRuinedRain>Yerba mate has ruined due to rain.</AM_YerbaRuinedRain>
+
+</LanguageData>

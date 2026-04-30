@@ -1,0 +1,62 @@
+<Defs>
+
+    <PipeSystem.ProcessDef>
+		<defName>AM_RawYerbaToGroundYerba</defName>
+		<label>Ground yerba leaves</label>
+		<description>Grind 60 raw yerba leaves.</description>
+		<spawnOnInteractionCell>true</spawnOnInteractionCell>
+		<autoExtract>false</autoExtract>
+		<useIngredients>true</useIngredients>
+		<transfersIngredientList>true</transfersIngredientList>
+		<priorityInBillList>0</priorityInBillList>
+		<ingredients>
+			<li>
+				<thing>AM_RawYerbaMate</thing>
+				<countNeeded>60</countNeeded>
+			</li>
+		</ingredients>
+		<ticks>7500</ticks>
+		<results>
+			<li>
+				<thing>AM_GroundYerbaMate</thing>
+				<count>60</count>
+			</li>
+		</results>
+		<noPowerDestroysProgress>false</noPowerDestroysProgress>
+		<destroyIngredientsOnStart>true</destroyIngredientsOnStart>
+	</PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+		<defName>AM_GroundYerbaToYerba</defName>
+		<label>Station grounded yerba</label>
+		<description>Turns 30 grinded yerba into 30 mate-ready yerba.</description>
+		<labelOverride>Turns 30 grinded yerba into 30 mate-ready yerba.</labelOverride>
+		<priorityInBillList>0</priorityInBillList>
+		<spawnOnInteractionCell>true</spawnOnInteractionCell>
+		<ingredients>
+			<li>
+				<thing>AM_GroundYerbaMate</thing>
+				<countNeeded>30</countNeeded>
+			</li>
+		</ingredients>
+		<ticksQuality>
+			<li>180000</li>
+			<li>300000</li>
+			<li>420000</li>
+			<li>540000</li>
+			<li>720000</li>
+			<li>900000</li>
+			<li>1200000</li>
+		</ticksQuality>
+		<results>
+			<li>
+				<thing>AM_Yerba</thing>
+				<count>30</count>
+			</li>
+		</results>
+		<stopAtQuality>true</stopAtQuality>
+		<allowExtractAtCurrentQuality>true</allowExtractAtCurrentQuality>
+		<autoExtract>false</autoExtract>
+	</PipeSystem.ProcessDef>
+
+</Defs>
